@@ -1,0 +1,803 @@
+/* 
+*   Autor: Viewit / Andre Sobral
+*   Criacao: 23/Maio/2016
+*   Revisao: dd/mmm/aaaa
+*
+*/
+
+
+
+/* ------------------------------------------------------------------------ */
+/*  FORMULARIO */
+
+    // altura (height) dos botoes e input
+        $inputHW:    45px;
+
+    // Tipo de fonte
+        $fontTypeInput:   'regular';
+        $fontTypeButton:  'regular';
+
+    // Tamanho da fonte
+        $fontSizeInput:   15px;  // Cor botoes
+        $fontSizeButton:  15px;  // Cor botoes
+        $fontSizeIcon:    28px;  // Cor botoes
+		
+    // Cor botoes    
+		$fontColorInput:     #666;  	// Font color
+        $bkgInput:   		 #fff;   	// Cor do botao
+        $brdInput:   		 #BEBEBE;  	// Cor borda do botao
+        
+    // Cor botoes    
+		$fontColorButton:    #666;  	// Font color
+        $bkgButton:   		 #E7E7E7;   // Cor do botao
+        $brdButton:   		 #BEBEBE;  	// Cor borda do botao
+
+    // Cor botoes    
+		$fontColorButton-Ac:    #fff;  	// Font color
+        $bkgButton-Ac:   		 $cordestaque;     // Cor do botao
+        $brdButton-Ac:   		 $cordestaque;  	// Cor borda do botao
+
+/* ------------------------------------------------------------------------ */
+/*  ICONS */
+
+	[class*="icon-"]:before {
+		display: inline-block;
+		vertical-align: middle;
+		width: $inputHW;
+		height: $inputHW;
+		line-height: $inputHW;
+		text-align: center;
+	}
+
+/* ------------------------------------------------------------------------ */
+/*  FORMULARIO */
+
+	.bx-input {
+	    display: inline-block;
+	    position: relative;
+	    vertical-align: top;
+	}
+
+html {
+  
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+}
+*, *:before, *:after {
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a, label, select { -webkit-tap-highlight-color: transparent; }
+/* ------------------------------------------------------------------------ */
+/*  COR BACKGROUND INPUT */
+
+	input[type="text"],
+	textarea{
+		border:1px solid  $brdInput;
+		background-color: $bkgInput;
+		color: 			  $fontColorInput;
+	}
+
+/* ------------------------------------------------------------------------ */
+/*  COR PLACEHOLDER  INPUT*/
+
+	::-webkit-input-placeholder,
+	input[type="text"],
+	div[class*=" icon-"],
+	div[class*=" icon-"]:before,
+	textarea:focus {
+	   color: #b3b3b3;  
+	   outline: none;
+	}
+
+/* ------------------------------------------------------------------------ */
+/*  COR DAS BORDAS DO BUTTON */
+
+	button,
+	div.button,
+	a.button,
+	input[type="submit"],
+	input[type="button"],
+	input[type="image"],
+	select,
+	div.bx-input.icon-micphone.button {
+		border:1px solid  $brdButton;
+		background-color: $bkgButton;
+		color: 			  $fontColorButton;
+	}
+
+
+/* ------------------------------------------------------------------------ */
+/*  ALINHA ICONE A ESQUERDA NO INPUT*/
+
+	div[data-local*="right"]:before{
+	  right: 10px;
+	  margin-right: -10px;
+	  cursor: pointer!important;
+	}
+
+	div[data-local*="right"]:before input{
+	  margin: 0;
+	}
+
+	div[data-local*="right"] > input.right{
+	  margin: 0;
+	  padding-left: 10px !important;
+	}
+
+/* ------------------------------------------------------------------------ */
+/*  ALTURA DO INPUT E TAMANHO DA FONT */
+
+	// input
+	input[type="text"]{
+		font-size: $fontSizeInput; 
+	}
+	// icon
+	div[class*=" icon-"]:before,
+	span[class*="icon-"]:before {
+		font-size: $fontSizeIcon; 
+	}	
+
+	// botao
+	button,
+	div.button,
+	a.button,
+	input[type="submit"],
+	input[type="button"],
+	input[type="image"]{
+		font-size: $fontSizeInput; 
+	}
+
+	// altura (height)
+	button,
+	div.button,
+	a.button,
+	a.select, 
+	input[type="submit"],
+	input[type="button"],
+	input[type="image"],
+	input[type="text"],
+	div[class*=" icon-"]:before {
+	    height:$inputHW;
+	    line-height:$inputHW;
+	    display: inline-block;
+	    vertical-align: top;
+	    text-decoration: none;
+	    width: 100%;
+	}
+
+	button,
+	div.button,
+	a.button,
+	input[type="submit"],
+	input[type="button"],
+	input[type="image"] {
+	    position: relative;
+	    z-index: 3;
+	}
+
+	button,
+	div.button,
+	a.button,
+	input[type="submit"],
+	input[type="button"],
+	input[type="image"] {
+	    position: relative;
+	    z-index: 3;
+	}
+
+/* ------------------------------------------------------------------------ */
+/*  CONFIGURACOES DOS BOTOES */
+
+	button,
+	div.button,
+	a.button,
+	input[type="submit"],
+	input[type="button"],
+	input[type="image"] {
+		margin: 0 0;
+		padding: 0px 12px;
+		vertical-align: center;
+	    display: inline-block;
+	    vertical-align: top;
+	}
+/* ------------------------------------------------------------------------ */
+/*  BOTAO LINK 100% */
+
+	a.button.full-bt { 
+		margin: 10px 0; 
+		color: #fff;
+		width: 100%;
+		padding: 0;
+	}
+
+/* ------------------------------------------------------------------------ */
+/*  CONFIGURACOES DOS BOTOES */
+
+	button,
+	div.button,
+	a.button,
+	input[type="submit"],
+	input[type="button"],
+	input[type="image"] {
+		width: auto;
+	}
+/* ------------------------------------------------------------------------ */
+/*  BOTAO LINK 100% */
+
+	.button[class*="two"]   { width: 40%;  margin: 0;}
+	.button[class*="left"]  { float: left}
+	.button[class*="right"] { float: right}
+
+/* ------------------------------------------------------------------------ */
+/*  CORRECOES DE ALINHAMENTO */
+
+	button,
+	input[type="submit"],
+	input[type="image"],
+	input[type="button"],
+	div.button,
+	a.button {
+
+	    height:$inputHW;
+	    line-height:$inputHW;
+		margin-left: inherit;
+		margin-left: -5px;
+	}
+
+	input[type="image"],
+		div.button,
+		a.button, {
+		height:$inputHW;
+		line-height:$inputHW;
+	}
+
+
+/* 
+ * OUTRAS CONFIGURACOES DO INPUT
+ * * * * * * * * * * * * * * * * */
+
+/* FOCUS */
+	.inputFocus {
+	    color: red!important;
+	}
+
+	input.inputFocus {
+	    border:1px solid red!important;
+	}
+
+/* TEXTO DIGITADO  */
+	.inputPass {
+	    color: green!important;
+	}
+
+	input.inputPass {
+	    border:1px solid green!important;
+	}
+
+/* CONTAINER INPUT  */
+	.bx-input {
+	    display: inline-block;
+	    position: relative;
+	    width: 100%;
+	}
+/* BASE DO ICONE */
+div[class*=" icon-"]:before{
+    display:block;
+    position: absolute;
+    margin-left: 0;
+    margin-top: 3px;
+    width: 30px;
+    text-align: center;
+    z-index: 5;
+}
+
+
+/* ESPACO NO INPUT COM ICONE A DIREITA  */
+	div[class*="icon-"] > input{
+	    padding: 0px 0px 0px 30px!important;
+	}
+
+/* ESPACO NO INPUT COM ICONE A ESQUERDA  */
+	div.bx-input input{
+	    padding: 0px 20px 0px 10px;
+	}
+
+	div.bx-input.icon-micphone.button{
+		
+		input{
+			background: inherit;
+			border: 0;
+			height: $inputHW - 2;
+
+			&.right{
+				padding-left: 10px!important;
+				padding-right: 25px!important;	
+			}
+		}
+	}
+
+/* -- */
+	div.button,
+	a.button {
+		cursor: pointer;
+	}
+
+	button:active,
+	a.button:active,
+	div.button:active,
+	div.button:active input {
+		color: $fontColorButton-Ac!important; 
+		background-color: $bkgButton-Ac!important;
+		border: 1px solid $cordestaque!important;
+	}
+/* -- */
+	span[class*="icon-"]:before {
+		
+		//
+		font-size: $fontSizeIcon;
+		padding-top: 10px;
+		display: inline-block;
+		vertical-align: middle;
+		height:$inputHW;
+	}
+/* -- */
+label > span {
+	display: block;
+	padding: 2px 0;
+}
+	fieldset {
+	    border: 0px solid #EE685C  !important;
+	    padding: 0px 0px 10px 0px !important;
+	    margin-bottom: -10px;
+	    display: table;
+
+	    a {
+	     	color: #7C7C7F;  
+	     	
+	     	&.lc-cep{ 
+	     	    color: #7C7C7F;
+			    text-align: right!important;
+			    display: block;
+			    font-size: 13px;
+			}
+	 	}
+	    //
+	    a.button,
+	    button,
+	    input[type="submit"]{
+	      display: table;
+	      width: 100%;
+	      height: 45px;
+	      text-transform: uppercase;
+	    }
+
+	    a.button{
+	        cursor: pointer;
+	        span{
+	            display: table-cell;
+	            vertical-align: middle;
+	            padding: 0 10px;
+	        }
+	    }
+	    //
+	    span{
+			//color: #7C7C7F;  
+			color: $cordestaque;  
+			font-weight: bold;
+			border: 0px solid #EE7F1C;
+			display: block;
+			font-size: 12px;
+			padding: 0 5px;
+	    }
+
+	    //
+	    p { 
+	        display:none;
+	        margin-top: -1px;
+	        font-size: 12px;
+	        font-family: "Verdana";
+	    }
+
+	    //
+	    label {
+	      	border: 0px solid #4285EE;
+	      	padding: 0px;
+	      	padding-top: 5px;
+	      	display: block;
+	      	position: relative;
+	         	
+	         	//
+	         	&[class*="icon-"]{
+	         		&:before {
+	         			color: $coradicional3;
+	         			display: block;
+	         			height: 45px;
+	         			width: 45px; 
+	         			text-align: center;
+	         			line-height: 45px;
+	         			top: 30px;
+	         			font-size: 30px;
+	         		}
+	         		input[type="text"],
+	         		input[type="email"],
+	         		input[type="tel"],
+	         		input[type="email"] { padding-left: 40px!important; }
+	         	}
+
+	         	&[class*="icon-arrow-"]{
+	         		&:before {
+	         			position: absolute;
+	         			right:0!important;
+	         			margin-top: 0px;
+	         			line-height: 50px!important;
+					    bottom: 0px!important;
+					    top: inherit;
+	         		}
+         		}
+
+				&[class*="select icon-order"],
+				&[class*="select icon-filter"] {
+
+					&:before {
+	         			position: absolute;
+	         			right:0!important;
+	         			top: 22px;
+	         			margin-top: 0px;
+	         			line-height: 50px!important;
+	         		}
+
+				}
+
+				a.icon-filter {
+					background: transparent;
+					border: thin solid #D7D7D8;
+					&:before {
+	         			position: absolute;
+	         			right:0!important;
+	         			top: 0px;
+	         			margin-top: 0px;
+	         			line-height: 50px!important;
+	         			font-size: 26px;
+	         			color: $coradicional3;
+	         		}
+
+				}
+
+	         	//
+			    input:focus,
+			    select:focus,
+			    textarea:focus {
+			        outline: none;
+			        border: none!important;
+			        color: #5F5F5F !important;
+			        background-color: rgba(black, 0.05)!important;
+			            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.42);
+					       -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.42);
+    					        box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.42);
+
+			    }
+
+			    select:focus,
+
+		        //
+		        &.erro {
+		            //
+		            a.button,
+		            select,
+		            input[type="text"],
+		            input[type="email"]
+		            input[type="tel"],
+		            input[type="email"] {
+		                border-color: red;
+		            }
+		            //
+		            p {
+		                display: block;
+		                color: red;
+		                margin-bottom: -10px;
+		            }
+		            //
+		            input:focus,
+		            select:focus,
+		            textarea:focus {
+		            	outline: none;
+		                border-color: blue!important;
+		                color: blue!important;
+		            }
+		        }
+		        //
+
+		        select {
+		            color: #33465d;
+		            font-size: 12px !important;
+		            padding: 12px;
+		            padding-right: 37px;
+		            text-transform: uppercase;
+		            -moz-appearance: none !important;
+		            -webkit-appearance: none !important;
+		            background-position: right 2px;
+		            background-origin: content-box;
+		            background: transparent;
+		            width: 100%;
+		            position: relative;
+		        }
+	    }
+
+	    &:last-child {
+	        //margin-bottom: 20px;
+	    }
+	    //
+	    input[type="text"],
+	    input[type="email"]
+	    input[type="tel"],
+	    input[type="email"],
+	    input[type="email"],
+	    input[type="file"],
+	    textarea,
+	    select,
+	    a.select {
+	      display: block;
+	      width: 100%;
+	      height: 45px;
+	      box-sizing: border-box;
+	      border: thin solid #D7D7D8 !important;
+	      font-size: 15px;
+	      font-family: "Helvetica Neue", verdana!important;
+	      font-smooth: auto;
+	      color: #716F75 !important;	  
+	    }
+	    //
+	    input[type="text"],
+	    input[type="email"]
+	    input[type="tel"],
+	    input[type="email"],
+	    input[type='number'],
+	    textarea {
+	      padding: 0 10px;
+	      background: transparent;
+	      -webkit-appearance: none;
+	    }
+	    //
+	    textarea {
+	      padding: 10px;
+	    }
+	    //
+		input[type="file"]{
+			appearance:none;
+			width: 100%;
+			position: relative;
+			-webkit-box-sizing: border-box;
+			background: transparent;
+			text-align: center;
+				//
+				&::-webkit-file-upload-button {
+					  border: none;
+					  margin: 0;
+					  padding: 0;
+					  -webkit-appearance: none;
+					  line-height: 50px;
+					  width: 0;
+					  background: transparent;
+
+				}
+				&::after {
+					content: '*';
+					display: inline-block;
+					margin-left:3px;
+					padding: 3px 8px 2px;
+					position: absolute;
+					left: 100%;
+					margin-left:-50px;
+					-webkit-appearance: none;
+					background: transparent;
+					width: 50px ;
+					height: 50px ;
+					line-height: 50px ;
+					text-align: center;
+					font: 0/1px Arial; 
+				}
+		}
+		//
+
+		input[type="text"],
+	    input[type="email"]
+	    input[type="tel"],
+	    input[type="email"],
+	    input[type="email"],
+	    input[type="file"],
+	    textarea,
+	    select,
+	    a.select, 
+	    button,
+	    .button {
+	    	border-radius: 5px;
+	    }	
+
+	    // CONFIGURACOES //
+	    ///////////////////
+	        &.col1{
+	          label {
+	              border: 0px solid green;
+	              width: 48%;
+	          }
+	        }
+	        //  
+	        // 
+	        &.col2 {
+	          label {
+	            //
+	            &:first-child {
+	              width: 48%;
+	              float: left;
+	              margin-top: 0px;
+	            }
+	            //
+	            &:last-child {
+	              margin-left: 52%;
+	              margin-top: 0px;
+	            }      
+	          }
+	        }
+
+	        // 
+	        &.col2-left{
+	          label {
+	            //
+	            &:first-child {
+	              border: 0px solid green;
+	              width: 70px;
+	              float: left;
+	              position: relative;
+	              margin-top: 0px;
+	            }
+	            //
+	            &:last-child {
+	              margin-top: 0px;
+	              margin-left: 80px;
+	            }      
+	          }
+	        }
+	        // 
+	        &.col2-right{
+	          position: relative;
+	          margin-top: 0px;
+	          label {
+	            //
+	            &:first-child {
+	              margin-right: 80px;
+                  margin-top: 0px;
+	            }
+	            //
+	            &:last-child {
+	              border: 0px solid green;
+	              width: 70px;
+	              position: absolute!important;
+	              top:0px;
+	              right:0px;
+	              margin-top:0px;
+	            }      
+	          }
+	        }
+
+	        //
+	        &.radio,
+	        &.checkbox,
+	        &.col2.radio,
+	        &.col2.checkbox{
+	          label {
+	            //border: 1px solid red;
+	            padding-top: 0;
+	            margin:5px 0 0px 0;
+	            height: 40px;
+	            line-height: 40px;
+	            //
+	            &:first-child { margin-right:5px;}
+	            //
+	            input[type="radio"],
+	            input[type="checkbox"],
+	            span {
+	                display: inline-block;
+	                vertical-align: middle;
+	                margin: 0;
+	                padding: 0;
+	                font-size: 14px;
+	            }    
+	          }
+	        }
+	}
+
+
+	// botao carregar itens
+	a.loader-item {
+		display: block; 
+		width: 200px; 
+		position: relative;
+		margin: 15px auto;
+		height: 45px;
+		border: 1px solid #999999;
+		line-height: 45px;
+		text-align: center;
+		font-size: 17px;
+		color: #999999;
+			//
+			&:before {
+				position: absolute;
+				top:2px;
+				right: 1px;
+			}
+
+			//
+			&:active {
+				color: white;
+				background-color: rgba(255, 0, 0, 0.22);
+			}
+	}
+
+	// botao filtros 
+		label a.button.icon-filter.active {
+			color: white;
+			background-color: $coradicional3;
+			border-radius: 10px 10px 0 0;
+			border: 1px solid $coradicional3;
+			height: 56px;
+
+				&:before { color: white; }
+		}
+
+div.col3 {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 25px 0px 10px 0px;
+
+        
+        ul {
+        	text-align: center;
+
+			//
+			li {
+
+				border: thin solid #D7D7D8 !important;
+				font-size: 12px;
+				display: inline-block!important;
+				font-size: 14px;
+				position: relative;
+				width: 33.7%;
+				margin-right: -4px;
+				background-color: white;
+				//
+				&:active { 	    				
+	   				background: $coradicional3;
+		    	}
+				//
+				&:first-child { 
+    				border-radius: 6px 0 0 6px;
+    			}        				
+				//
+    			&:last-child { 
+    				border-radius: 0 6px 6px 0;
+    			}
+				//
+    			a {
+    				//
+					display: block;
+					height: 45px;
+					line-height: 45px;
+						//
+						&:active { 	    				
+		    				-webkit-tap-highlight-color:transparent;
+		    				background: none;
+	    				}
+    			}
+			}
+        }
+			
+    }
+//
+

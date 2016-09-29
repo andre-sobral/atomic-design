@@ -1,0 +1,68 @@
+/* 
+*   Autor: Viewit / Andre Sobral
+*   Criacao: 23/Maio/2016
+*   Revisao: dd/mmm/aaaa
+*
+*/
+
+
+@import url('../css/swiper/swiper.min.css');
+//@import url('../css/swiper/swiper-custom.css') screen;
+
+
+/* ------------------------------------------------------------------------ */
+/* Swiper */
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        	//
+        	img {
+        		width: 100%;
+        	}
+    }
+
+
+    /////////
+    .pagination {
+        border: 1px solid rgba(255, 255, 255, 0);
+        display: block;
+        z-index: 1;
+        position: absolute;
+        text-align:center; 
+
+    	span.swiper-pagination-bullet { 
+			// display:table-cell;
+			background: rgba(white, 0.20);
+			border-radius: 50%;
+			opacity:0.6;
+			width: 15px;
+			height: 15px;
+			
+			
+			&.swiper-pagination-bullet-active {
+				background: #fff;
+				opacity: 1;
+			}
+		}
+    }
+
+    		 
+

@@ -1,0 +1,183 @@
+
+<!-- LIVE RELOAD -->
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript" src="static/lib/jquery-2.2.0.min.js"></script>
+  
+  <!-- CONTEÚDO -->
+  <div id="conainer">
+    ...Container loader
+  </div>
+
+<script  type="text/javascript">
+  
+  //<![CDATA[
+    jQuery(window).load(function() {
+
+        /* ------------------------------------------------------------------------ */
+        /*  FUNÇÃO LOADER
+        /* ------------------------------------------------------------------------ */
+        jQuery("#spinner").delay(1100).fadeOut();
+        var wheight = jQuery(window).height()
+        
+        jQuery("#spinner").css({
+            "height": + wheight,
+            "position": "absolute",
+            "width": "100%",
+            "background-color": "#fff",
+            "z-index": "9999999",
+            "text-align": "center"
+        });
+
+        /* ------------------------------------------------------------------------ */
+        /*  FUNÇÃO NAVBAR
+        /* ------------------------------------------------------------------------ */
+        jQuery("#closeNavbar").css({
+            "color": "red",
+            "display": "block",
+            "background-color": "#54688b",
+            "height": "30px",
+            "line-height": "30px",
+            "padding-left": "10px",
+            "text-align": "left"
+        });
+
+        jQuery("#closeNavbar a").css({
+            "color": "#fff",
+            "font-size": "12px"
+        });
+
+        $("#closeNavbar a.closeNavbar").css({
+            "display": "inline-block",
+            "float": "right",
+            "padding-right": "10px",
+            "cursor": "pointer"
+        });
+
+        $("#closeNavbar a ").on("click", function() {
+          $("#closeNavbar").empty();
+        });
+
+        /* ------------------------------------------------------------------------ */
+        /*  FUNÇÃO INCLUDES
+        /* ------------------------------------------------------------------------ */
+        jQuery(function(){
+
+          //URL 
+          var url = window.location;
+          var urlString = url.toString();
+          var str = urlString;
+
+          if(str.search("=") != -1) {
+
+            var page = str.indexOf("=");
+            var res = str.substring(page +1);
+            var valUrl = res.length;
+
+            if(valUrl >= "3") {
+              includeUrl = res;
+            }
+            else {
+              includeUrl = 'home';
+            }
+          }
+          else {
+            includeUrl = 'home';
+          }
+            //CONTEÚDO
+            $.ajax({
+              url: "templates/pages/"+includeUrl+".tpl",
+              type: "GET",
+              cache: !1,
+              success: function(e) {
+               var str = e;
+               var res = str.replace(/\{{>head}}|\{{>header}}|\{{>waston}}|\{{>footer}}+/g, "");
+
+                $('#conainer').html(res);
+                $("body").css({"margin":"0 0"})
+              }
+            })
+
+            //head
+            $.ajax({
+              url: "templates/global/head.tpl",
+              type: "GET",
+              cache: !1,
+              success: function(e) {
+                $('head').html(e)
+              }
+            })
+
+            //header
+            $.ajax({
+              url: "templates/global/header.tpl",
+              type: "GET",
+              cache: !1,
+              success: function(e) {
+
+                $('[data-ref="navigation-bar"]').html(e)
+              }
+            })
+
+            //watson
+            $.ajax({
+              url: "templates/pages/watson.tpl",
+              type: "GET",
+              cache: !1,
+              success: function(e) {
+
+                $('[data-ref="watson"]').html(e)
+              }
+            })
+           
+            //menu mobile
+            $.ajax({
+              url: "templates/global/menu-mobile.tpl",
+              type: "GET",
+              cache: !1,
+              success: function(e) {
+
+                $('div[data-ref="menu-mobile"]').html(e)
+              }
+            })
+
+            //rotativo
+            $.ajax({
+              url: "templates/pages/home.tpl",
+              type: "GET",
+              cache: !1,
+              success: function(e) {
+
+                $('section[data-ref="slide"]').html(e)
+              }
+            })
+
+           
+            
+            //footer
+            $.ajax({
+              url: "templates/global/footer.tpl",
+              type: "GET",
+              cache: !1,
+              success: function(e) {
+                $('footer').html(e)
+              }
+            })
+        });
+    });
+  //]]>
+</script>
+
+
+<script>var number = 1 + Math.floor(Math.random() * 6); document.write(' <link rel="stylesheet" type="text/css" href="static/css/main.css?id='+number+'" media="all">') </script>
+
+</html>
+
+
+
+
+
+

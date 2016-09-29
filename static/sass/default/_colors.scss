@@ -1,0 +1,62 @@
+/* 
+*	CONFIGURACAO
+*
+*   Autor: Viewit / Andre Sobral
+*   Criacao: 18/Jan/2016
+*   Revisao: 00/Jan/2016
+*/
+
+
+/* ------------------------------------------------------------------------ */
+/* PALETA DE CORES */
+
+	//
+	$cordestaque:    	  #a8275d;
+	
+	//
+	$corprimaria:  	 	   $cordestaque;
+	$corsecundaria:  	   $cordestaque;
+	
+	//
+	$coradicional:   	   #00c7c7;
+	$coradicional2:   	   #713725;
+	$coradicional3:   	   #FF7C00;
+	
+	//
+	$cortexto:       	    #f8f8f8;
+
+	//
+	$corlink:       	    #f8f8f8;
+	$corlinkHover:			$cordestaque;	
+	$corlinkVisited:		#f8f8f8;
+	$corlinkActive:			#f8f8f8;
+
+
+/* ------------------------------------------------------------------------ */
+/* MIXINS COLOR */
+	
+	//
+	$cordestaque-claro:   	lighten($cordestaque, 10%);
+	$cordestaque-escuro:  	darken($cordestaque, 10%);
+
+	//
+	$corprimaria-claro:  	lighten($corprimaria, 50%);
+	$corprimaria-escuro:  	darken($corprimaria, 20%);
+
+	//
+	$corsecundaria-claro:   lighten($corsecundaria, 10%);
+	$corsecundaria-escuro:  darken($corsecundaria, 10%);
+
+	//
+	$coradicional-claro:   	lighten($coradicional, 20%);
+	$coradicional-escuro:  	darken($coradicional, 20%);
+
+
+/* ------------------------------------------------------------------------ */
+/* BACKGRONDS */
+
+	// COLOR Body
+	$corbody:       	  #352f3a;
+
+	// COLOR box
+	$corbox:       	       #f8f8f8;

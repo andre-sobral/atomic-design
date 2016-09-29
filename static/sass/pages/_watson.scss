@@ -1,0 +1,507 @@
+/* 
+*
+*   Autor: Viewit - André Sobral
+*   Criacao: 23/Set/2016
+*   Revisao: 
+*/
+
+	/* ------------------------------------------------------------------------ */
+	/* CONTAINER */
+	// 
+
+.watson { 
+
+	.lettering{
+		opacity: 0;
+		text-shadow: 2px 2px black;
+		font: 0/1 Arial;
+	}
+	//
+	.lettering.netkevin_text_animation{
+		opacity: 1;
+		position: relative;
+		font-size: 30px;
+		font-family: 'titulo-bold', sans-serif;
+
+			&:after{
+				display: inline-block;
+				margin-left: -5px; 
+				content: "|";
+				animation: lettering 1s ease-in-out infinite;
+				animation-fill-mode:forwards; /*when the spec is finished*/
+			}
+	}
+
+
+	/* Sessao */
+	section.intro{
+
+		position: fixed;
+		width: 100%;
+		height: 100%;
+
+		.intro-container{
+			//
+			// border: 1px solid red;
+			display: block;
+			position: relative;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+
+
+				//
+				//
+				.spiner {
+					display: none;
+					position: absolute;
+					border: 1px solid red;
+					width: 200px;
+					margin-left: - 100px;
+					height: 50px;
+					left: 50%;
+					top: 80px;
+				}
+
+				//
+				//
+				.baals{
+					visibility: hidden;
+					position: absolute;
+					// border: 1px solid red;
+					width: 200px;
+					margin-left: - 100px;
+					height: 50px;
+					left: 50%;
+					top: 200px;
+				}
+
+				//
+				//
+				.brand {
+					visibility: hidden;
+					position: absolute;
+					// border: 1px solid red;
+					width: 280px;
+					margin-left: - 140px;
+					height: 130px;
+					left: 50%;
+					top: 50%;
+						//
+						&:before{
+							font-size: 17em;
+							line-height: 220px;
+							color: #fff;
+						}
+
+				}//brand
+
+	  	}
+	}//secion
+
+	//
+	//
+	.cnt-interative {
+		//
+		position: absolute;
+		display: block; 
+		// border: 1px solid #fff;
+		margin-top: 63px;
+		width: 100%;
+		width: 100%;
+		padding: 0 5%; 
+		z-index:3;
+		visibility: hidden;
+		
+				//
+				h2{
+					//
+					font-family: 'Oswald', sans-serif;
+					text-shadow: 2px 2px black;
+					letter-spacing: 1pt;
+					font-weight: normal;
+					color: #fff;
+					display: block;
+					border: 1px solid $cordestaque;
+					min-height: 80px;
+					font-size: 25px;
+					padding: 10px 15px;
+					text-align: center;
+					position: relative; 
+					z-index: 1;
+						//
+						&:before {
+							content: "";
+						    position: absolute;
+						    top:  60%;
+						    left: -15px;
+						    border-width: 15px 0px 0px 15px;
+						    border-style: solid;
+						    border-color: $cordestaque transparent;
+						    display: block;
+						    width: 0;
+						}//before
+
+
+				}//h2
+
+				.cnt-form{
+					display: block; 
+
+					#straps{
+						display: block;
+						height: 40px!important; 
+						margin-top: 10px; 
+								//
+								span{
+								display: inline-block; 
+								font-size: 15px;
+									//
+									&:before {
+										// border: 1px solid blue; 
+										line-height: 19px;
+										font-size: 20px;
+										width: 30px;
+									}
+								}//span
+								//
+								ul{
+									height: 30px; 
+									margin-left: 50px!important;
+								}
+
+					}//traps
+					//
+					input{
+						// text-align: center; 
+						border: 0px solid;
+						// border-bottom: 1px solid;
+						border-bottom: 1px solid;
+						background-color: transparent;
+						color: #666666;
+						font-size: 24px;
+					    font-family: "regular";
+					    color: #fff;
+					    font-style: italic;
+					    margin-top: 50px;
+					    padding: 10px;
+					    border-radius: 0!important; 
+					    height: 55px;
+
+					            appearance:none;
+						   -moz-appearance:none; /* Firefox */
+						-webkit-appearance:none; /* Safari and Chrome */
+					    	//
+					    	&:focus {
+					    		background-color: rgba($cordestaque, 0.22);
+					    	}
+
+					}//input 
+					
+					button{
+						width: 100%;
+						margin: 5px 0;
+						background-color: $cordestaque; 
+						border: none;
+						border-bottom: 6px solid darken($cordestaque, 12%);
+						color: #fff;
+						margin-top: 10%;
+						height: 65px;
+					}
+
+				}
+
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* ANIMATION LOADER */
+	// 			
+		/* Sessao */
+		section.form-watson {
+			position: absolute;
+			z-index: 1;
+			top: 0; 
+			left: 0
+
+		}
+
+		.baals.animated, 
+		.brand.icon-viewit-1.animated, 
+		.cnt-interative.animated{
+			visibility: visible!important;
+		}
+
+
+
+		.loading {
+		    position: absolute;
+		    top: 12px;
+		    left: 50%;
+		    /* border: 1px solid red; */
+		    margin-left: -39px;
+		    width: 92px;
+		    text-align: left;
+		    display: none;
+		}
+		.loading-bar {
+			display: inline-block;
+		    width: 18px;
+		    height: 20px;
+		    margin-right: 9px;
+		    border-radius: 50%;
+		    animation: loading 1s ease-in-out infinite;
+		    background-color: #fff;
+
+		}
+		.loading-bar:nth-child(1) {
+		  
+		  animation-delay: 0;
+		}
+		.loading-bar:nth-child(2) {
+		  
+		  animation-delay: 0.10s;
+		}
+		.loading-bar:nth-child(3) {
+		  
+		  animation-delay: 0.20s;
+		}
+
+
+}
+
+
+	@keyframes lettering {
+	  0% {
+	    opacity: 0;
+	  }
+	  
+	  40% {
+	    opacity: 0;
+	  }
+
+	  50% {
+	    opacity: 1;
+	  }
+	 
+	  100% {
+	    opacity: 1;
+	  }
+	}
+
+		
+
+	/* ------------------------------------------------------------------------ */
+	/* ANIMATION */
+	// 
+
+		/* BALLS NIMACAO CENTRAL */
+		.baals.start-motion {
+
+			border-color: blue; 
+			-webkit-animation: notifymePlay 5s ease ;
+			-moz-animation: notifymePlay 5s ease ;
+			    animation: notifymePlay 5s ease ;
+			      transform-origin: 50% 50%;
+
+				animation-fill-mode:forwards; /*when the spec is finished*/
+		}
+
+				@-webkit-keyframes notifymePlay {
+					0%    {top:200px; opacity:1}
+					35%   {top:200px; opacity:1}
+					50%   {top:80px;  opacity:1}
+					90%   {top:80px;  opacity:1}
+					100%  {top:80px;  opacity:0}
+				}
+
+		/* FADE LOGO */
+		.brand.start-motion {
+
+			border-color: blue; 
+			-webkit-animation: motion-brand 4s ease ;
+			-moz-animation: motion-brand 4s ease ;
+			    animation: motion-brand 4s ease ;
+			      transform-origin: 50% 50%;
+
+				animation-fill-mode:forwards; /*when the spec is finished*/
+		}
+
+				/* ANIMACAO CENTRAL */
+				@-webkit-keyframes motion-brand {
+					0%   {top:50%; opacity:1}
+					35%  {top:50%; opacity:1}
+					50%  {top:55%; opacity:0}
+					90%  {top:55%; opacity:0}
+					100% {top:55%; opacity:0}
+				}
+
+		
+
+
+			@keyframes loading {
+			  0% {
+			    transform: scale(1);
+			    opacity: 1;
+			  }
+			  
+			  20% {
+			    transform: scale(1, 2.2);
+			    opacity: 0.5;
+			  }
+			 
+			  40% {
+			    transform: scale(1);
+			    opacity: 1;
+			  }
+			}
+
+	/* ------------------------------------------------------------------------ */
+	/* ANIMATION INTRO */
+	// 
+
+		.loader {
+		  position: relative;
+		  width: 80px;
+		  margin: 12px auto;
+		  height: 30px;
+		}
+
+		.duo {
+		  height: 20px;
+		  width: 50px;
+		  position: absolute;
+		  
+		}
+
+		.duo, .dot {
+		  animation-duration: 0.8s;
+		  animation-timing-function: ease-in-out;
+		  animation-iteration-count: 6;
+		  //animation-iteration-count: infinite;
+
+		}
+
+		.duo1 {
+		  left: 0;
+		}
+
+		.duo2 {
+		  left: 30px
+		}
+
+		.dot.dts {
+
+		}
+
+		.dot {
+		  width: 20px;
+		  height: 20px;
+		  border-radius: 10px;
+		  background: #fff;
+		  position: absolute;
+		}
+
+		.dot-a {
+		  left: 0px;  
+		}
+
+		.dot-b {
+		  right: 0px;
+		}
+
+		.loader.start .duo1  {
+		  animation-name: spin;
+		}
+
+		.loader.start .duo2 {
+		  animation-name: spin;
+		  animation-direction: reverse;
+		}
+
+		.loader.start .duo2 .dot-b {
+		  animation-name: onOff;
+		}
+
+		.loader.start .duo3 .dot.dts {
+		  animation-name: stp_dot;
+		  animation-duration: 0.8s;
+		  animation-timing-function: ease-in-out;
+		}
+
+		.duo1 .dot-a {
+		  opacity: 0;
+		  animation-name: onOff;
+		  animation-direction: reverse;
+		}
+
+		/*/*/
+		@keyframes spin {
+		    0% { transform: rotate(0deg) }
+		   50% { transform: rotate(180deg) }
+		  100% { transform: rotate(180deg) }
+		}
+		@keyframes onOff {
+		    0% { opacity: 0; }
+		   49% { opacity: 0; }
+		   50% { opacity: 1; }
+		  100% { opacity: 1; }
+		}
+
+		@keyframes stp_dot {
+		    0% { opacity: 0; }
+		   49% { opacity: 0; }
+		   50% { opacity: 0; }
+		  99% { opacity: 1; }
+		}
+
+
+		@keyframes move {
+		  100% {
+		    transform: translate3d(0, 0, -1000px);
+		  }
+		}
+
+	/* ------------------------------------------------------------------------ */
+	/* ANIMATION bubble */
+	// 
+		.container {
+		  position: relative;
+		  width: 100%;
+		  min-height: 100%;
+		  transform-style: preserve-3d;
+		}
+
+		.bubble-wrap {
+			border: 1px solid red;
+		  position: relative;
+		  width: 100%;
+		  min-height: 100%;
+		  transform-style: preserve-3d;
+		  margin: 0 auto;
+		  width: 500px;
+		  height: 500px;
+		  transform-style: preserve-3d;
+		  transform-origin: center center;
+		  perspective: 600px;
+		  opacity: .03;
+		}
+
+		.bubble {
+		  position: absolute;
+		  background: black;
+		  opacity: .8;
+		  border-radius: 50%;
+		  animation: move 15s infinite;
+		}
+
+		@for $i from 1 through 100 {
+		  .bubble:nth-child(#{$i}) {
+		    $size: random(30)+px;
+		    height: $size;
+		    width: $size;
+		    animation-delay: -$i * .9s;
+		    transform: translate3d( (random(1000) * 1px), (random(1000) * 1px), (random(2000) * 1px));
+		    background: #fff;
+		  }
+		}
+

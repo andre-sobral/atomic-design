@@ -1,0 +1,120 @@
+/* Demo Syles */
+.swiper-v {
+  /*padding: 0;
+  margin: auto;*/
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  margin-bottom: -5px;
+}
+
+/*.swiper-v .arrow-left {
+  background: url(/casasbahia-s/images/arrows.png) no-repeat left top;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -15px;
+  width: 17px;
+  height: 30px;
+}
+
+.swiper-v .arrow-right {
+  background: url(/casasbahia-s/images/arrows.png) no-repeat left bottom;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -15px;
+  width: 17px;
+  height: 30px;
+}*/
+
+.swiper-v .swiper-container {
+   /* mude de acordo com o tamanho da imagem*/
+   /* width: 640px; */
+}
+.swiper-v .content-slide {
+  padding: 20px;
+  color: #fff;
+}
+
+.swiper-v .pagination {
+    height: 0px;
+}
+
+.swiper-v .swiper-pagination-switch:nth-of-type(1){
+  border-left: 5px solid white;
+}
+
+.swiper-v .swiper-pagination-switch {
+  display: table-cell;
+  height: 5px;
+  vertical-align: bottom;
+  background-color: #d2d2d2;
+  border-right: 5px solid white;
+}
+
+.swiper-v .swiper-active-switch {
+  background: #007fd1;
+}
+
+.swiper-v .swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Pagination */
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: -25px;
+ } 
+
+.swiper-pagination-bullet{
+    cursor: pointer;
+    height: 5px;
+    background: #262626;
+    /*border-right: 3px white solid;*/
+    display: inline-block;
+    position: relative;
+    bottom: 30px;
+    z-index: 1;
+    margin: 0px 4px;
+}
+
+.swiper-pagination-bullet:last-child{
+    border-right: none;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #dc242c;
+}
+
+#home-body .swiper-pagination-bullet:first-child:nth-last-child(1) {
+    //width: 100%;
+}
+
+#home-body .swiper-pagination-bullet:first-child:nth-last-child(2),
+#home-body .swiper-pagination-bullet:first-child:nth-last-child(2) ~ span {
+    // CorreÃ§Ã£o
+    width: 15px;
+    height: 15px;
+}
+
+#home-body .swiper-pagination-bullet:first-child:nth-last-child(3),
+#home-body .swiper-pagination-bullet:first-child:nth-last-child(3) ~ span{
+    /*width: 33.3%;*/
+}
+
+#home-body .swiper-pagination-bullet:first-child:nth-last-child(4),
+#home-body .swiper-pagination-bullet:first-child:nth-last-child(4) ~ span {
+    width: 25%;
+}
+
+.swiper-produtos,
+.swiper-cor{
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  /* Fix of Webkit flickering */
+  z-index: 1;
+}
+

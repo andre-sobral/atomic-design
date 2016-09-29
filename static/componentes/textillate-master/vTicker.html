@@ -1,0 +1,45 @@
+<html lang="en" dir="ltr" id="vticker" class="no-js"><head>  
+<meta charset="utf-8">
+<title>vTicker</title>
+
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<script src="http://richhollis.github.com/vticker/js/jquery-1.7.2.min.js"></script>
+<script src="jquery.vticker.min.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="container">
+<div id="content">
+
+    <script>
+      $(function() {
+        // $('#strap').vTicker('init', {padding:4 , mousePause:false});
+
+        $('#strap').vTicker('init', {
+            speed: 400, 
+            pause: 1800,
+            showItems: 1,
+            padding:5
+        });
+
+        
+     });
+    </script>
+
+    <h2 id="strap" class="center" style="overflow: hidden; position: relative; height: 76px;">
+      <ul style="position: absolute; margin: 0px; padding: 0px; top: 0px;">         
+        <li style="margin: 0px; padding: 0px; height: 76px;">A jQuery plug-in that adds scrolling<br>vertical tickers to your site</li>
+        <li style="margin: 0px; padding: 0px; height: 76px;">Just one line of javascript code is<br>all you need to start a vTicker</li>
+        <li style="margin: 0px; padding: 0px; height: 76px;">Items can be paused when the<br>mouse hovers over an item</li>
+        <li style="margin: 0px; padding: 0px; height: 76px;">Step backwards and forwards through your<br>ticker items with easy client methods</li>
+      </ul>
+    </h2>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+/* 
+*	CONFIGURACAO
+*
+*   Autor: Viewit / Andre Sobral
+*   Criacao: 18/Jan/2016
+*   Revisao: 00/Jan/2016
+*/
+
+
+/* ------------------------------------------------------------------------ */
+/* CNF */
+// 
+
+body {
+
+	background-color: $corbody;
+	background-image: url(../images/temp/bkg.jpg);
+	color: $cortexto;
+	overflow-x:hidden;
+	display: block;
+	font-size: 100%;
+
+		-webkit-font-smoothing: antialiased;
+		   -moz-font-smoothing: antialiased; 
+			    font-smoothing: antialiased;
+}
+
+
+/* ------------------------------------------------------------------------ */
+/* TIPOGRAFIA - Type */
+
+	// Por Classe
+
+		.thin       		{ font-family: "thin"}
+		.regular 			{ font-family: "regular"}
+		.bold 				{ font-family: "bold"}
+
+	// Por tag
+		body, p  			{ font-family: "regular"; }
+		h1 		    		{ font-family: "titulo-bold"}
+		h2, h3	    		{ font-family: "titulo-bold"}
+		h4, h5 				{ font-family: "titulo-regular"}
+
+/* ------------------------------------------------------------------------ */
+
+::-oz-selection 	{ background: $cordestaque; color:#fff; text-shadow: none; }
+::-moz-selection 	{ background: $cordestaque; color:#fff; text-shadow: none; }
+::selection 		{ background: $cordestaque; color:#fff; text-shadow: none; }
+
+/* ------------------------------------------------------------------------ */
+/* LINK */
+
+	a, a:link 	{ color:$cordestaque;}
+	a:hover 	{ color:green;}
+	a:visited 	{ color:orange;}
+	a:active    { color:$cordestaque;}
+
+
+.no-scroll {
+	 overflow: hidden; 
+	 position: fixed;
+	 width: 100%;
+	 height: 100%;
+	 left: 0;
+	 right: 0;
+}
+
+/* ------------------------------------------------------------------------ */
+/* MEDIAS */
+
+		@media screen and (min-width: 1150px) {
+			
+			h1,h2,h3	{font-size: 3em;}	
+			a, p, span	{font-size: 20px;}
+		}
+
+		// @media screen and (max-width: 1024px) {
+		// 	//h1, h2, h3, h4, h5 		{font-size: 19px;}	
+		// 	div, label, a, p, span	{font-size: 15px;}
+		// }
+
+		// // @media screen and (max-width: 768px) {
+			
+		// // 	h1, h2, h3, h4, h5 		{font-size: 1.5em;}	
+		// // 	div, label, a, p, span	{font-size: 1.02em;}
+		// // }
+
+		@media screen and (max-width: 425px) {
+			
+			//
+			a, p, span	{font-size: 1.02em;}
+		}
+
+		@media screen and (max-width: 320px) {
+			
+			a, p, span	{font-size: 1.05em;}
+		}

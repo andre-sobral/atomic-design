@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+
+  <body>
+    
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="typeit.min.js"></script>
+    
+
+    <p><span  class="lettering typeit-box" data-txt="Ola, seja bem-vindo qual e o seu nome?"></span></p>
+    <p><input type="text" value=" nome"></p>
+
+    <button> enviar </button>
+
+
+
+<script>
+
+
+        
+        // pega texto localizado no data-txt
+        var strTXT = $(".lettering").attr("data-txt");
+        
+        // função TIME para inserir o texto de boas-vindas 
+        function increase() {
+
+            for (var i = 0; i < 1000; i++){
+                
+                    $(".lettering").typeIt({
+                         strings: [ strTXT ],
+                         speed: 40
+                    });
+
+            }}
+
+            setTimeout(increase, 1000);
+
+
+        /* ------------------------------------------------------------------------ */
+        /*  BOTÃO SIMULA POST / GET
+        /* ------------------------------------------------------------------------ */
+        $('button').click(function(){
+           
+            // valor do input
+            var txt = $("input").val();
+
+            // se o input estiver vazio atualiza o placeholder
+            if (txt == "") {
+                $("input").attr({
+                    placeholder: 'texto obrigatório'
+                });
+            }
+
+            // quandoo texto estiver informado
+            else {
+                
+                //imprime o valor o texto
+                $(".lettering").typeIt({
+                     strings: [ "Tudo bem <strong> "+ txt + "</strong>, como posso te ajudar?" ],
+                     speed: 50,
+                     breakDelay: 750,
+                });
+
+                //limpa o input
+                $("input").val("");
+            }
+
+        });// END
+
+
+        /* ------------------------------------------------------------------------ */
+        /*    FUNÇÃO LETTER
+        /* ------------------------------------------------------------------------ */
+        function letterAnime(){
+
+              $('.typeit-box').typeIt({
+
+              // what to type
+
+              // typing speed
+              speed: 100,
+
+              // delete speed
+              deleteSpeed: undefined,
+
+              // make the typing pace irregular
+              lifeLike: false,
+
+              // show cursor
+              cursor: true,
+
+              // Choose whether you want multiple strings to be printed on top of each other
+              breakLines: true,
+
+              // The amount of time between typing multiple strings.
+              breakDelay: 750,
+
+              // The amount of time before the plugin begins typing after initalizing.
+              startDelay: 250,
+
+              // Have your string or strings continuously loop after completing.
+              loop: false,
+
+              // The amount of time between looping over a string or set of strings again.  
+              loopDelay: 750,
+
+              // Handle strings as HTML, which will process tags and HTML entities
+              html: true,
+
+              // Auto start
+              //autoStart: true, 
+
+              // A function that executes after your typing has completed
+              callback: function(){}
+              
+            });
+        }
+</script>
+
+
+  </body>
+</html>
