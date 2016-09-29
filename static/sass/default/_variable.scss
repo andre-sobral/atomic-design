@@ -14,7 +14,7 @@
 body {
 
 	background-color: $corbody;
-	background-image: url(../images/temp/bkg.jpg);
+	//background-image: url(../images/temp/bkg.jpg);
 	color: $cortexto;
 	overflow-x:hidden;
 	display: block;
@@ -50,7 +50,7 @@ body {
 /* ------------------------------------------------------------------------ */
 /* LINK */
 
-	a, a:link 	{ color:$cordestaque;}
+	a, a:link 	{ color:#6E0946;}
 	a:hover 	{ color:green;}
 	a:visited 	{ color:orange;}
 	a:active    { color:$cordestaque;}

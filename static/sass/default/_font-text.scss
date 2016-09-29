@@ -10,48 +10,73 @@
   sanfrancisco-display
 */
 
+/* ------------------------------------------------------------------------ */
+/*  LOCAL FOLDER */
 
-@font-face {
-  font-family: "titulo-bold";
-  src:url("../css/fonts/padrao/font-text/titulo-bold/font.eot");
-  src:url("../css/fonts/padrao/font-text/titulo-bold/font.eot?#iefix") format("embedded-opentype"),
-    url("../css/fonts/padrao/font-text/titulo-bold/font.woff") format("woff"),
-    url("../css/fonts/padrao/font-text/titulo-bold/font.ttf") format("truetype"),
-    url("../css/fonts/padrao/font-text/titulo-bold/font.svg#icon-font") format("svg");
-  font-weight: thin;
-  font-style: thin;
-}
+    $urlfont: "../css/fonts/font-text/";
 
+/* ------------------------------------------------------------------------ */
+/*  PADRÃO */
 
-@font-face {
-  font-family: "thin";
-  src:url("../css/fonts/padrao/font-text/thin/font.eot");
-  src:url("../css/fonts/padrao/font-text/thin/font.eot?#iefix") format("embedded-opentype"),
-    url("../css/fonts/padrao/font-text/thin/font.woff") format("woff"),
-    url("../css/fonts/padrao/font-text/thin/font.ttf") format("truetype"),
-    url("../css/fonts/padrao/font-text/thin/font.svg#icon-font") format("svg");
-  font-weight: thin;
-  font-style: thin;
-}
+    @font-face {
+        font-family: "title";
+        src:url( #{$urlfont}title/font.eot);
+        src:url( #{$urlfont}title/font.eot?#iefix) format("embedded-opentype"),
+        url( #{$urlfont}title/font.woff) format("woff"),
+        url( #{$urlfont}title/font.ttf) format("truetype"),
+        url( #{$urlfont}title/font.svg#icon-font) format("svg");
+            //
+            font-weight: bold;
+            font-style: bold;
+    }
 
-@font-face {
-  font-family: "regular";
-  src:url("../css/fonts/padrao/font-text/regular/font.eot");
-  src:url("../css/fonts/padrao/font-text/regular/font.eot?#iefix") format("embedded-opentype"),
-    url("../css/fonts/padrao/font-text/regular/font.woff") format("woff"),
-    url("../css/fonts/padrao/font-text/regular/font.ttf") format("truetype"),
-    url("../css/fonts/padrao/font-text/regular/font.svg#icon-font") format("svg");
-  font-weight: nornal;
-  font-style: normal;
-}
+    @font-face {
+        font-family: "text";
+        src:url( #{$urlfont}text/font.eot);
+        src:url( #{$urlfont}text/font.eot?#iefix) format("embedded-opentype"),
+        url( #{$urlfont}text/font.woff) format("woff"),
+        url( #{$urlfont}text/font.ttf) format("truetype"),
+        url( #{$urlfont}text/font.svg#icon-font) format("svg");
+            //
+            font-weight: bold;
+            font-style: bold;
+    }
 
-@font-face {
-  font-family: "bold";
-  src:url("../css/fonts/padrao/font-text/bold/font.eot");
-  src:url("../css/fonts/padrao/font-text/bold/font.eot?#iefix") format("embedded-opentype"),
-    url("../css/fonts/padrao/font-text/bold/font.woff") format("woff"),
-    url("../css/fonts/padrao/font-text/bold/font.ttf") format("truetype"),
-    url("../css/fonts/padrao/font-text/bold/font.svg#icon-font") format("svg");
-  font-weight: bold;
-  font-style: bold;
-}
+/* ------------------------------------------------------------------------ */
+/*  FONT FAMILY */
+
+    @font-face {
+        font-family: "bold";
+        src:url( #{$urlfont}bold/font.eot);
+        src:url( #{$urlfont}bold/font.eot?#iefix) format("embedded-opentype"),
+            url( #{$urlfont}bold/font.woff) format("woff"),
+            url( #{$urlfont}bold/font.ttf) format("truetype"),
+            url( #{$urlfont}Bold/font.svg#icon-font) format("svg");
+            //
+            font-weight: bold;
+            font-style: bold;
+    }
+
+    @font-face {
+        font-family: "regular";
+        src:url( #{$urlfont}regular/font.eot);
+        src:url( #{$urlfont}regular/font.eot?#iefix) format("embedded-opentype"),
+            url( #{$urlfont}regular/font.woff) format("woff"),
+            url( #{$urlfont}regular/font.ttf) format("truetype"),
+            url( #{$urlfont}regular/font.svg#icon-font) format("svg");
+            //
+            font-weight: normal;
+            font-style: normal;
+    }
+
+    @font-face {
+        font-family: "condensad";
+        src:url( #{$urlfont}condensad/font.eot);
+        src:url( #{$urlfont}condensad/font.eot?#iefix) format("embedded-opentype"),
+            url( #{$urlfont}condensad/font.woff) format("woff"),
+            url( #{$urlfont}condensad/font.ttf) format("truetype"),
+            url( #{$urlfont}condensad/font.svg#icon-font) format("svg");
+            //
+            font-weight: normal;
+            font-style: normal;
+    }

@@ -1,29 +1,87 @@
 /* 
-*   Autor: Viewit / Andre Sobral
-*   Criacao: 05/Jun/2016
-*   Revisao: 08/Jun/2016
+*   Projeto:  Anatomic Design
+*   Autor:    Viewit / Andre Sobral
+*	File:     Headings
+*	
+*   Criacao:  29/Set/2016
+*   main: 
+*/
+
+
+// /* Default  */
+
+// 	@import './default/_reset';
+// 	@import './default/_font-icon';
+// 	@import './default/_font-text';
+// 	@import './default/_colors';
+// 	@import './default/_variable';
+// 	@import './default/_bootstrap';
+// 	@import './default/_swiper'; 
+
+// /* Componente */
+
+
+// /* Style fixed */
+// 	// @import './global/_menu-mobile';
+// 	@import './global/_header';
+// 	@import './global/_footer';
+
+// /* Style pages */	
+// 	@import './pages/_home';
+// 	@import './pages/_watson';
+// 	
+
+
+/* 
+*   Project:  Atomic Design
+*   Autor:    Viewit / Andre Sobral
+*   Criacao:  29/Set/2016
+*   Revisao:  
 *
 */
 
+
+/*
+
+/* 	DEFINICÇÕES GERAIS ( settins ) */
+
+@import './default/_reset';
+@import './default/_colors';
+@import './default/_font-text';
+@import './default/_font-icon';
+
+
+// /* 	ELEMENTOS GLOBAIS ( atomos ) */
+
+
+@import "./default/_headings";
+// @import "./default/_links";
+// @import "./default/_lists";
+// @import "./default/_text";
+// @import "./default/_buttons";
+// @import "./default/_inputs";
+// @import "./default/_select";
+// @import "./default/_radio";
+
+
+// /* COMPONENTES (Moleculas) */ 
+
+// @import "./default/_forms";
+// @import "./default/_pagination";
+// @import "./default/_article";
+// @import "./default/_section";
+
+
+// /* CONTENT / BLOCK (organismo) */ 
+
+// @import "./default/_header";
+// @import "./default/_footer";
+// @import "./default/_menu";
+
+
+// /* PAGE STRUCTURE (Templates) */
+
+// @import "layout";
+
+
 /* Default  */
-
-	@import './default/_reset';
-	@import './default/_font-icon';
-	@import './default/_font-text';
-	@import './default/_colors';
-	@import './default/_variable';
-	@import './default/_bootstrap';
-	@import './default/_swiper'; 
-
-/* Componente */
-
-
-/* Style fixed */
-	// @import './global/_menu-mobile';
-	@import './global/_header';
-	@import './global/_footer';
-
-/* Style pages */	
-	@import './pages/_home';
-	@import './pages/_watson';
-	

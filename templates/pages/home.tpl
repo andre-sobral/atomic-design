@@ -20,11 +20,17 @@
               <!--// 
                   // CONTAINER
                   //////////// --> 
-                  <main data-ref="home">
+                  <main data-ref="main">
                      
-                        <div data-ref="watson">
-                            {{>watson}}
-                        </div>
+                     
+                    <h1> Componentes</h1>
+                    <h2> Componentes</h2>
+                    <h3> Componentes</h3>
+                    <h4> Componentes</h4>
+                    <h5> Componentes</h5>
+                    <h6> Componentes</h6>
+
+                     <a href="?cont=formulario"> Formulario </a>
 
                   </main>
         

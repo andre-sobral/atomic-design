@@ -1,0 +1,31 @@
+/* 
+*   Projeto:  Anatomic Design
+*   Autor:    Viewit / Andre Sobral
+*	File:     Headings
+*	
+*   Criacao:  29/Set/2016
+*   Revisao: 
+*/
+
+
+// Por tag
+
+	// h1 	{ font-family: "bold";    color: $cordestaque;}
+	// h2	{ font-family: "bold";    color: $cordestaque; }
+	// h3	{ font-family: "bold";    color: $cordestaque; }
+	// h4 	{ font-family: "regular"; color: $cordestaque; }
+	// h5 	{ font-family: "regular"; color: $cordestaque; }
+	// h6 	{ font-family: "regular"; color: $cordestaque; }
+
+
+	.headings {
+	  font-family:"title"; color: $cordestaque;
+	  font-size: 20px;
+	}
+
+	h1	{ @extend .headings; font-size: 20px + 10}
+	h2	{ @extend .headings; font-size: 20px + 8}
+	h3	{ @extend .headings; font-size: 20px + 6}
+	h4 	{ @extend .headings; font-size: 20px + 4}
+	h5 	{ @extend .headings; font-size: 20px + 2}
+	h6 	{ @extend .headings; font-size: 20px}
